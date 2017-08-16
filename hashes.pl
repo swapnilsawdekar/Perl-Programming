@@ -49,12 +49,21 @@ sub arrayOfHash {
         },
     );
     push @AoH, {husband => "fred", wife => "Wilma", son => "Jenny"};    #Push one more hash into array
-#    print $AoH[0]{"husband"};
-#     foreach my $currentHash (@AoH) {
-#         foreach my $key (keys %{currentHash}) {
-#             print("${key}\n");
-#         }
-#     }
+    print $AoH[0]{"husband"}."\n";                                           #Print specific element from array of hash
+    print ("Display contents of array of hash by using De-Referencing on each pointer element of array\n");
+    my $index = 0;
+    foreach my $currentHash (@AoH) {
+        print ("Array[${index}]....\n");
+        foreach my $key (sort keys %${currentHash}) {                   #De-Referencing the pointer of hash
+            my %h = %${currentHash};                                    #De_Referencing hash from pointer
+            print("\t${key} => $h{$key}\n");
+            print("\t${key} => ${$currentHash}{$key}\n");                 #De-Referencing hash from pointer
+        }
+        $index++;
+        print $i."\n";
+    }
+##################################################################################################
+    print ("Display contents of array of hash using array indexing\n");
     foreach my $i (0 .. (scalar @AoH)-1) {                             #Traverse array (scalar function returns number of elements in the array
         print ("Array[${i}]....\n");
         foreach my $key (sort keys %{$AoH[$i]}) {                      #$AoH[$i] is each hash
