@@ -60,7 +60,6 @@ sub arrayOfHash {
             print("\t${key} => ${$currentHash}{$key}\n");                 #De-Referencing hash from pointer
         }
         $index++;
-        print $i."\n";
     }
 ##################################################################################################
     print ("Display contents of array of hash using array indexing\n");
