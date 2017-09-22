@@ -2,11 +2,11 @@ use strict;
 use warnings;
 
 use lib "A/";
-use Mymodule qw(checkOddEven checkPrime checkPalindrome);
+use Mymodule qw(checkPrime checkPalindrome);
 my $y = 7;
 my $str = "madam";
 
-if (checkOddEven($y)) {
+if (Mymodule::checkOddEven($y)) {
 	print "$y is an odd number\n";
 } else {
 	print "$y is an even number\n";
