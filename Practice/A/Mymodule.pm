@@ -3,7 +3,8 @@ use strict;
 use warnings;
 
 use Exporter qw(import);
-our @EXPORT_OK = qw(checkOddEven checkPrime checkPalindrome);
+our @EXPORT    = qw(checkOddEven);
+our @EXPORT_OK = qw(checkPrime checkPalindrome);
 
 sub checkOddEven {
   my $x = $_[0];
