@@ -1,7 +1,6 @@
-use strict;
-use warnings;
-
 package Vehicle;
+    use strict;
+    use warnings;
 
     sub new {
         my ($class)  = shift;
